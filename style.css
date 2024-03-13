@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: hsl(259, 100%, 65%);
+  --error: hsl(0, 100%, 67%);
+  --gray: hsl(0, 1%, 44%);
+}
+body {
+  background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom-right-radius: 100px;
+  width: 700px;
+}
+.user-input {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+}
+.user-input::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background-color: var(--gray);
+  left: 0;
+  bottom: -30px;
+}
+.input {
+  margin: 10px;
+  color: var(--gray);
+}
+input {
+  border: 1px solid var(--gray);
+  outline: none;
+  padding: 10px 20px;
+  font-size: 32px;
+  font-weight: 800;
+  border-radius: 10px;
+  width: 160px;
+}
+button {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
+label {
+  display: block;
+}
+.result p {
+  font-size: 70px;
+  font-weight: 800;
+}
+.result p span {
+  color: var(--primary-color);
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+  .user-input::after {
+    width: 80%;
+  }
+  input {
+    font-size: 15px;
+    width: 65px;
+    padding: 5px;
+  }
+  .result p {
+    font-size: 30px;
+  }
+}
