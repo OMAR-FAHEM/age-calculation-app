@@ -46,7 +46,7 @@ myForm.addEventListener("submit", (event) => {
     document.querySelector("p.day").classList.add("red");
     day.classList.add("red-border");
     document.querySelector(".wrong-day").textContent =
-      "not valid day in this month";
+      "Must be a valid day";
   }
 
   if (inputsValidity.every((x) => x === "valid")) {
