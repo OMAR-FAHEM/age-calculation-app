@@ -14,20 +14,47 @@
   </head>
   <body>
     <div class="container">
-      <form class="user-input">
+      <form class="user-input" novalidate>
         <p class="input day">
           <label for="day">DAY</label>
-          <input type="number" max="31" min="1" name="day" id="day" placeholder="DD" />
+          <input
+            type="number"
+            max="31"
+            min="1"
+            name="day"
+            required
+            id="day"
+            placeholder="DD"
+          />
+          <span class="wrong-day err"></span>
         </p>
         <p class="input month">
           <label for="month">Month</label>
-          <input  max="12" min="1" type="number" name="month" id="month" placeholder="MM" />
+          <input
+            max="12"
+            min="1"
+            type="number"
+            required
+            name="month"
+            id="month"
+            placeholder="MM"
+          />
+          <span class="wrong-month err"></span>
         </p>
         <p class="input year">
           <label for="year">Year</label>
-          <input type="number" name="year" id="year" placeholder="YYYY" />
+          <input
+            type="number"
+            required
+            min="1"
+            pattern="\d{4}"
+            name="year"
+            id="year"
+            placeholder="YYYY"
+          />
+          <span class="wrong-year err"></span>
         </p>
-        <button type="button">
+        <button type="submit">
           <img src="assets/images/icon-arrow.svg" alt="" />
         </button>
       </form>

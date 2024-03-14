@@ -8,6 +8,7 @@
   --primary-color: hsl(259, 100%, 65%);
   --error: hsl(0, 100%, 67%);
   --gray: hsl(0, 1%, 44%);
+  --error: hsl(0, 100%, 67%);
 }
 body {
   background-color: hsl(0, 0%, 94%);
@@ -88,4 +89,18 @@ label {
   .result p {
     font-size: 30px;
   }
+}
+
+.input span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.1;
+  margin-top: 10px;
+  color: var(--error);
+}
+.red{
+  color: var(--error);
+}
+.red-border{
+  border-color: var(--error);
 }
