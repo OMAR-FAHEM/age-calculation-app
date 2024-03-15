@@ -41,13 +41,6 @@ myForm.addEventListener("submit", (event) => {
     }
   }
   const dateOfBirth = new Date(year.value, month.value - 1, day.value);
-  console.log(dateOfBirth);
-  if (+day.value !== dateOfBirth.getDate()) {
-    document.querySelector("p.day").classList.add("red");
-    day.classList.add("red-border");
-    document.querySelector(".wrong-day").textContent =
-      "Must be a valid day";
-  }
 
   if (inputsValidity.every((x) => x === "valid")) {
     const ageInMillseconds = Date.parse(currentDate) - Date.parse(dateOfBirth);
